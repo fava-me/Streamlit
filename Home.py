@@ -83,11 +83,18 @@ elif team == "Chelsea":
     st.write("London is Blue")
 elif team == "Manchester United":
     st.write("Glory glory ManU")
-st.select_slider("Enter your size here",["XS","S","M","L","XL","2XL"])
-age = st.number_input("Enter your age here:", min_value=5, max_value=50, value=25)
-st.slider("Enter a number here:", min_value=1, max_value=50)
 
-time = st.time_input("Enter the time for the appointment here")
+breakfast = st.multiselect("What did you have for breakfast?", ["Milk", "Tea", "Coffee", "Cocoa"])
+st.write(breakfast)
+
+st.select_slider("Enter your size here",["XS","S","M","L","XL","2XL"])
+
+age = st.number_input("Enter your age here:", min_value=18, max_value=50, value=25)
+
+st.slider("Enter a number here:", min_value=1, max_value=100, value=50)
+
+date = st.date_input("Enter the date for the appointment here: ")
+time = st.time_input("Enter the time for the appointment here: ")
 
 name = st.text_input("Enter your name here")
 las_name = st.text_input("Enter your last name here")
@@ -96,8 +103,8 @@ if st.button("Submit info"):
     st.write(f"Details on {name} have been submitted successfully")
 
 essay = st.text_area("Write an essay here", height=150)
-st.write(len(essay))
-st.write(len(essay.split()))
+st.write(f"Number of characters : {len(essay)}")
+st.write(f"Number of words : {len(essay.split())}")
 
 uploaded_file = st.file_uploader("Upload your file here")
 st.write(uploaded_file)
@@ -144,12 +151,13 @@ with st.spinner("Operation in progress.Please wait"):
         tym.sleep(5)
         st.write("Operation completed")
 
-st.toast("You have successfully logged in")
-st.write("This is a crown:crown: ")
+st.toast("You have successfully logged in",)
+st.write("This is a crown:crown: and I love it :100:")
 #st.balloons
 
-st.success("You have successfully logged in")
+# callout messages
+st.success("You have successfully logged in", icon="👍")
 st.info("Upload a .csv or a .tsv file")
 st.warning("You are close to exceeding the maximum character content")
-
+st.error("Failed to load image")
 st.write("Its a good day")
