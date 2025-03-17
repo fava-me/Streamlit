@@ -152,4 +152,4 @@ st.success("You have successfully logged in")
 st.info("Upload a .csv or a .tsv file")
 st.warning("You are close to exceeding the maximum character content")
 
-st.write("This is so frustrating")
+st.write("Its a good day")
