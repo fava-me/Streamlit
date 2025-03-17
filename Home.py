@@ -147,4 +147,9 @@ with st.spinner("Operation in progress.Please wait"):
 st.toast("You have successfully logged in")
 st.write("This is a crown:crown: ")
 #st.balloons
-st.wrtite("This is so frustrating")
+
+st.success("You have successfully logged in")
+st.info("Upload a .csv or a .tsv file")
+st.warning("You are close to exceeding the maximum character content")
+
+st.write("This is so frustrating")
